@@ -1,3 +1,18 @@
+Tomorrow Colorscheme for Vim
+============================
+
+This is a fork of [Solarized
+Theme](https://github.com/altercation/vim-colors-solarized) adapted to
+[Tomorrow](https://github.com/chriskempson/tomorrow-theme) colors and
+themes. You can use the same options as with Solarized, just replace
+`solarized` with `tomorrow`.
+
+![tomorrow-screenshot](./img/tomorrow-vim.png)
+
+The Readme of the original theme Solarized is following.
+
+* * *
+
 ---
 Title: Solarized Colorscheme for Vim
 Description: Precision colors for machines and people
