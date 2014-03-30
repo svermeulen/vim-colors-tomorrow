@@ -657,7 +657,6 @@ exe "hi! texRefLabel"    . s:fg_yellow .s:bg_back   .s:fmt_none
 "}}}
 " ruby highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! rubyDefine"     . s:fg_base1   .s:bg_back   .s:fmt_bold
 "rubyInclude
 "rubySharpBang
 "rubyAccess
@@ -678,6 +677,22 @@ exe "hi! rubyDefine"     . s:fg_base1   .s:bg_back   .s:fmt_bold
 "hi! link rubyGlobalVariable    Identifier
 "hi! link rubyClassVariable     Identifier
 "hi! link rubyConstant          Type
+exe "hi! rubyDefine"                     .s:fg_violet .s:bg_none   .s:fmt_bold
+exe "hi! rubyConstant"                   .s:yellow    .s:bg_none   .s:fmt_none
+exe "hi! rubyAccess"                     .s:yellow    .s:bg_none   .s:fmt_none
+exe "hi! rubyAttribute"                  .s:blue      .s:bg_none   .s:fmt_none
+exe "hi! rubyInclude"                    .s:blue      .s:bg_none   .s:fmt_none
+exe "hi! rubyLocalVariableOrMethod"      .s:orange    .s:bg_none   .s:fmt_none
+exe "hi! rubyCurlyBlock"                 .s:orange    .s:bg_none   .s:fmt_none
+exe "hi! rubyStringDelimiter"            .s:green     .s:bg_none   .s:fmt_none
+exe "hi! rubySymbol"                     .s:green     .s:bg_none   .s:fmt_none
+exe "hi! rubyInterpolationDelimiter"     .s:orange    .s:bg_none   .s:fmt_none
+exe "hi! rubyConditional"                .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! rubyRepeat"                     .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! rubyControl"                    .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! rubyException"                  .s:violet    .s:bg_none   .s:fmt_none
+
+"}}}
 " javascript "{{{
 " ---------------------------------------------------------------------
 " Use with https://github.com/pangloss/vim-javascript
