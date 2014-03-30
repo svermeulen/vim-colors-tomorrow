@@ -541,9 +541,9 @@ exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base1  .s:bg_base1    .s:sp_base1  
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base2
 exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base2   .s:sp_base1
 exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base2
-exe "hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_base0
+exe "hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_base1
 hi! link lCursor Cursor
-exe "hi! MatchParen"     .s:fmt_bold   .s:fg_red    .s:bg_base1
+exe "hi! MatchParen"     .s:fmt_bold   .s:fg_base0    .s:bg_red
 
 "}}}
 " vim syntax highlighting "{{{
