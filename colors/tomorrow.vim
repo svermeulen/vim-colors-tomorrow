@@ -224,7 +224,7 @@ let colors_name = "tomorrow"
 " leave the hex values out entirely in that case and include only cterm colors)
 " We also check to see if user has set tomorrow (force use of the
 " neutral gray monotone palette component)
-if (has("gui_running") && g:tomorrow_degrade == 0)
+if (has("gui_running"))
     let s:vmode       = "gui"
     let s:base3       = "#1d1f21"
     let s:base2       = "#282a2e"
@@ -281,7 +281,38 @@ else
     let s:blue        = "DarkBlue"      " 4
     let s:cyan        = "DarkCyan"      " 6
     let s:green       = "DarkGreen"     " 2
+endif
 
+if (&background == 'light')
+  if (has("gui_running"))
+      let s:vmode       = "gui"
+      let s:base3       = "#ffffff"
+      let s:base2       = "#efefef"
+      let s:base1       = "#d6d6d6"
+      let s:base0       = "#8e908c"
+      let s:yellow      = "#eab700"
+      let s:orange      = "#f5871f"
+      let s:red         = "#c82829"
+      let s:magenta     = "#8959a8"
+      let s:violet      = "#8959a8"
+      let s:blue        = "#4271ae"
+      let s:cyan        = "#3e999f"
+      let s:green       = "#718c00"
+  elseif g:tomorrow_termcolors == 256
+      let s:vmode       = "cterm"
+      let s:base3       = "234"
+      let s:base2       = "236"
+      let s:base1       = "246"
+      let s:base0       = "251"
+      let s:yellow      = "222"
+      let s:orange      = "173"
+      let s:red         = "167"
+      let s:magenta     = "139"
+      let s:violet      = "139"
+      let s:blue        = "109"
+      let s:cyan        = "143"
+      let s:green       = "110"
+  endif
 endif
 "}}}
 " Formatting options and null values for passthrough effect "{{{
