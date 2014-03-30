@@ -1,3 +1,13 @@
+" ---------------------------------------------------------------------
+" Tomorrow Theme:
+" ---------------------------------------------------------------------
+" Name:     Tomorrow vim colorscheme
+" URL:      https://github.com/Slava/vim-colors-tomorrow
+" License:  OSI approved MIT license (see end of this file)
+"
+" ---------------------------------------------------------------------
+" Original Theme:
+" ---------------------------------------------------------------------
 " Name:     Solarized vim colorscheme
 " Author:   Ethan Schoonover <es@ethanschoonover.com>
 " URL:      http://ethanschoonover.com/solarized
