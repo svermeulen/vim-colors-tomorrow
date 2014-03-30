@@ -422,6 +422,7 @@ exe "hi! Comment"        .s:fmt_ital   .s:fg_base1  .s:bg_none
 "       *Comment         any comment
 
 exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
+exe "hi! Number"         .s:fmt_none   .s:fg_magenta.s:bg_none
 "       *Constant        any constant
 "        String          a string constant: "this is a string"
 "        Character       a character constant: 'c', '\n'
