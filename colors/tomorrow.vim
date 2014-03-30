@@ -204,6 +204,7 @@ call s:SetOption("visibility","normal")
 call s:SetOption("diffmode","normal")
 call s:SetOption("hitrail",0)
 call s:SetOption("menu",1)
+call s:SetOption("extra_js_colors",0)
 
 "}}}
 " Colorscheme initialization "{{{
@@ -676,6 +677,27 @@ exe "hi! rubyDefine"     . s:fg_base1   .s:bg_back   .s:fmt_bold
 "hi! link rubyGlobalVariable    Identifier
 "hi! link rubyClassVariable     Identifier
 "hi! link rubyConstant          Type
+" javascript "{{{
+" ---------------------------------------------------------------------
+" Use with https://github.com/pangloss/vim-javascript
+exe "hi! jsObjectKey"                    .s:fg_green  .s:bg_none   .s:fmt_bold
+exe "hi! jsFunction"                     .s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi! jsUndefined"                    .s:fg_orange .s:bg_none   .s:fmt_ital
+exe "hi! jsNull"                         .s:fg_orange .s:bg_none   .s:fmt_bold
+exe "hi! jsReturn"                       .s:fg_magenta.s:bg_none   .s:fmt_bold
+
+" This just makes everything too colorful
+if g:tomorrow_extra_js_colors
+  exe "hi! jsNoise"                      .s:fg_base1  .s:bg_none   .s:fmt_none
+  exe "hi! jsFuncArgCommas"              .s:fg_base1  .s:bg_none   .s:fmt_none
+  exe "hi! jsFuncBraces"                 .s:fg_orange .s:bg_none   .s:fmt_none
+  exe "hi! jsRegexpString"               .s:fg_red    .s:bg_none   .s:fmt_none
+  exe "hi! jsBrackets"                   .s:fg_orange .s:bg_none   .s:fmt_none
+  exe "hi! jsParens"                     .s:fg_base1  .s:bg_none   .s:fmt_none
+  exe "hi! jsBraces"                     .s:fg_base1  .s:bg_none   .s:fmt_none
+  exe "hi! jsFuncParens"                 .s:fg_base1  .s:bg_none   .s:fmt_none
+endif
+
 "}}}
 " haskell syntax highlighting"{{{
 " ---------------------------------------------------------------------
@@ -839,7 +861,6 @@ exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi! pandocMetadataKey"              .s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
 hi! link pandocMetadataTitle             pandocMetadata
-
 "}}}
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
