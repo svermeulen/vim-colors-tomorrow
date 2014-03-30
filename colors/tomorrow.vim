@@ -288,8 +288,8 @@ if (&background == 'light')
       let s:vmode       = "gui"
       let s:base3       = "#ffffff"
       let s:base2       = "#efefef"
-      let s:base1       = "#d6d6d6"
-      let s:base0       = "#8e908c"
+      let s:base1       = "#8e908c"
+      let s:base0       = "#4d4d4c"
       let s:yellow      = "#eab700"
       let s:orange      = "#f5871f"
       let s:red         = "#c82829"
@@ -708,58 +708,55 @@ exe "hi! texRefLabel"    . s:fg_yellow .s:bg_back   .s:fmt_none
 "hi! link rubyGlobalVariable    Identifier
 "hi! link rubyClassVariable     Identifier
 "hi! link rubyConstant          Type
-exe "hi! rubyDefine"                     .s:fg_violet .s:bg_none   .s:fmt_bold
-exe "hi! rubyConstant"                   .s:yellow    .s:bg_none   .s:fmt_none
-exe "hi! rubyAccess"                     .s:yellow    .s:bg_none   .s:fmt_none
-exe "hi! rubyAttribute"                  .s:blue      .s:bg_none   .s:fmt_none
-exe "hi! rubyInclude"                    .s:blue      .s:bg_none   .s:fmt_none
-exe "hi! rubyLocalVariableOrMethod"      .s:orange    .s:bg_none   .s:fmt_none
-exe "hi! rubyCurlyBlock"                 .s:orange    .s:bg_none   .s:fmt_none
-exe "hi! rubyStringDelimiter"            .s:green     .s:bg_none   .s:fmt_none
-exe "hi! rubySymbol"                     .s:green     .s:bg_none   .s:fmt_none
-exe "hi! rubyInterpolationDelimiter"     .s:orange    .s:bg_none   .s:fmt_none
-exe "hi! rubyConditional"                .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! rubyRepeat"                     .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! rubyControl"                    .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! rubyException"                  .s:violet    .s:bg_none   .s:fmt_none
-
+exe "hi! rubyDefine"                   .s:fg_violet .s:bg_none   .s:fmt_bold
+exe "hi! rubyConstant"                 .s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! rubyAccess"                   .s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! rubyAttribute"                .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! rubyInclude"                  .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! rubyLocalVariableOrMethod"    .s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi! rubyCurlyBlock"               .s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi! rubyStringDelimiter"          .s:fg_green  .s:bg_none   .s:fmt_none
+exe "hi! rubySymbol"                   .s:fg_green  .s:bg_none   .s:fmt_none
+exe "hi! rubyInterpolationDelimiter"   .s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi! rubyConditional"              .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! rubyRepeat"                   .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! rubyControl"                  .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! rubyException"                .s:fg_violet .s:bg_none   .s:fmt_none
 "}}}
 " python highlighting "{{{
 " ---------------------------------------------------------------------
 " Use with https://github.com/hdima/python-syntax
-exe "hi! pythonInclude"                  .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! pythonStatement"                .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! pythonConditional"              .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! pythonRepeat"                   .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! pythonException"                .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! pythonFunction"                 .s:blue      .s:bg_none   .s:fmt_none
-exe "hi! pythonPreCondit"                .s:violet    .s:bg_none   .s:fmt_none
-exe "hi! pythonRepeat"                   .s:cyan      .s:bg_none   .s:fmt_none
-exe "hi! pythonExClass"                  .s:orange    .s:bg_none   .s:fmt_none
-
+exe "hi! pythonInclude"                .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! pythonStatement"              .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! pythonConditional"            .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! pythonRepeat"                 .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! pythonException"              .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! pythonFunction"               .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! pythonPreCondit"              .s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi! pythonRepeat"                 .s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! pythonExClass"                .s:fg_orange .s:bg_none   .s:fmt_none
 "}}}
 " javascript "{{{
 " ---------------------------------------------------------------------
 " Use with https://github.com/pangloss/vim-javascript
-exe "hi! jsObjectKey"                    .s:fg_green  .s:bg_none   .s:fmt_bold
-exe "hi! jsFunction"                     .s:fg_orange .s:bg_none   .s:fmt_none
-exe "hi! jsUndefined"                    .s:fg_orange .s:bg_none   .s:fmt_ital
-exe "hi! jsNull"                         .s:fg_orange .s:bg_none   .s:fmt_bold
-exe "hi! jsReturn"                       .s:fg_magenta.s:bg_none   .s:fmt_bold
+  exe "hi! jsObjectKey"                  .s:fg_green  .s:bg_none   .s:fmt_bold
+  exe "hi! jsFunction"                   .s:fg_orange .s:bg_none   .s:fmt_none
+  exe "hi! jsUndefined"                  .s:fg_orange .s:bg_none   .s:fmt_ital
+  exe "hi! jsNull"                       .s:fg_orange .s:bg_none   .s:fmt_bold
+  exe "hi! jsReturn"                     .s:fg_magenta.s:bg_none   .s:fmt_bold
 
-" This just makes everything too colorful
-if g:tomorrow_extra_js_colors
-  exe "hi! jsNoise"                      .s:fg_base1  .s:bg_none   .s:fmt_none
-  exe "hi! jsFuncArgCommas"              .s:fg_base1  .s:bg_none   .s:fmt_none
-  exe "hi! jsFuncBraces"                 .s:fg_orange .s:bg_none   .s:fmt_none
-  exe "hi! jsRegexpString"               .s:fg_red    .s:bg_none   .s:fmt_none
-  exe "hi! jsBrackets"                   .s:fg_orange .s:bg_none   .s:fmt_none
-  exe "hi! jsParens"                     .s:fg_base1  .s:bg_none   .s:fmt_none
-  exe "hi! jsBraces"                     .s:fg_base1  .s:bg_none   .s:fmt_none
-  exe "hi! jsFuncParens"                 .s:fg_base1  .s:bg_none   .s:fmt_none
-endif
+  " This just makes everything too colorful
+  if g:tomorrow_extra_js_colors
+    exe "hi! jsNoise"                    .s:fg_base1  .s:bg_none   .s:fmt_none
+    exe "hi! jsFuncArgCommas"            .s:fg_base1  .s:bg_none   .s:fmt_none
+    exe "hi! jsFuncBraces"               .s:fg_orange .s:bg_none   .s:fmt_none
+    exe "hi! jsRegexpString"             .s:fg_red    .s:bg_none   .s:fmt_none
+    exe "hi! jsBrackets"                 .s:fg_orange .s:bg_none   .s:fmt_none
+    exe "hi! jsParens"                   .s:fg_base1  .s:bg_none   .s:fmt_none
+    exe "hi! jsBraces"                   .s:fg_base1  .s:bg_none   .s:fmt_none
+    exe "hi! jsFuncParens"               .s:fg_base1  .s:bg_none   .s:fmt_none
+  endif
 
-"}}}
 " haskell syntax highlighting"{{{
 " ---------------------------------------------------------------------
 " For use with syntax/haskell.vim : Haskell Syntax File
@@ -988,19 +985,6 @@ function! TomorrowMenu()
     let g:loaded_tomorrow_menu = 1
 
     if g:colors_name == "tomorrow" && g:tomorrow_menu != 0
-
-        amenu &Tomorrow.&Contrast.&Low\ Contrast        :let g:tomorrow_contrast="low"       \| colorscheme tomorrow<CR>
-        amenu &Tomorrow.&Contrast.&Normal\ Contrast     :let g:tomorrow_contrast="normal"    \| colorscheme tomorrow<CR>
-        amenu &Tomorrow.&Contrast.&High\ Contrast       :let g:tomorrow_contrast="high"      \| colorscheme tomorrow<CR>
-        an    &Tomorrow.&Contrast.-sep-                 <Nop>
-        amenu &Tomorrow.&Contrast.&Help:\ Contrast      :help 'tomorrow_contrast'<CR>
-
-        amenu &Tomorrow.&Visibility.&Low\ Visibility    :let g:tomorrow_visibility="low"     \| colorscheme tomorrow<CR>
-        amenu &Tomorrow.&Visibility.&Normal\ Visibility :let g:tomorrow_visibility="normal"  \| colorscheme tomorrow<CR>
-        amenu &Tomorrow.&Visibility.&High\ Visibility   :let g:tomorrow_visibility="high"    \| colorscheme tomorrow<CR>
-        an    &Tomorrow.&Visibility.-sep-                 <Nop>
-        amenu &Tomorrow.&Visibility.&Help:\ Visibility    :help 'tomorrow_visibility'<CR>
-
         amenu &Tomorrow.&Background.&Toggle\ Background :ToggleBG<CR>
         amenu &Tomorrow.&Background.&Dark\ Background   :set background=dark  \| colorscheme tomorrow<CR>
         amenu &Tomorrow.&Background.&Light\ Background  :set background=light \| colorscheme tomorrow<CR>

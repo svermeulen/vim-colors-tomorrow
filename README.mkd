@@ -8,6 +8,7 @@ themes. You can use the same options as with Solarized, just replace
 `solarized` with `tomorrow`.
 
 ![tomorrow-screenshot](./img/tomorrow-vim.png)
+![tomorrow-screenshot](./img/tomorrow-light-vim.png)
 
 * * *
 
