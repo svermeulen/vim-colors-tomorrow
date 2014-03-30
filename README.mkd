@@ -9,9 +9,9 @@ themes. You can use the same options as with Solarized, just replace
 
 ![tomorrow-screenshot](./img/tomorrow-vim.png)
 
-The Readme of the original theme Solarized is following.
-
 * * *
+
+The Readme of the original theme Solarized is following.
 
 ---
 Title: Solarized Colorscheme for Vim
