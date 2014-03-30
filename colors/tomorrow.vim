@@ -212,7 +212,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name = "solarized"
+let colors_name = "tomorrow"
 
 "}}}
 " GUI & CSApprox hexadecimal palettes"{{{
@@ -352,44 +352,9 @@ endif
 " Background value based on termtrans setting "{{{
 " ---------------------------------------------------------------------
 if (has("gui_running") || g:solarized_termtrans == 0)
-    let s:back        = s:base03
+    let s:back        = s:base3
 else
     let s:back        = "NONE"
-endif
-"}}}
-" Alternate light scheme "{{{
-" ---------------------------------------------------------------------
-if &background == "light"
-    let s:temp03      = s:base03
-    let s:temp02      = s:base02
-    let s:temp01      = s:base01
-    let s:temp00      = s:base00
-    let s:base03      = s:base3
-    let s:base02      = s:base2
-    let s:base01      = s:base1
-    let s:base00      = s:base0
-    let s:base0       = s:temp00
-    let s:base1       = s:temp01
-    let s:base2       = s:temp02
-    let s:base3       = s:temp03
-    if (s:back != "NONE")
-        let s:back    = s:base03
-    endif
-endif
-"}}}
-" Optional contrast schemes "{{{
-" ---------------------------------------------------------------------
-if g:solarized_contrast == "high"
-    let s:base01      = s:base00
-    let s:base00      = s:base0
-    let s:base0       = s:base1
-    let s:base1       = s:base2
-    let s:base2       = s:base3
-    let s:back        = s:back
-endif
-if g:solarized_contrast == "low"
-    let s:back        = s:base02
-    let s:ou          = ",underline"
 endif
 "}}}
 " Overrides dependent on user specified values and environment "{{{
