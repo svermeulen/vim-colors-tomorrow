@@ -693,6 +693,20 @@ exe "hi! rubyControl"                    .s:violet    .s:bg_none   .s:fmt_none
 exe "hi! rubyException"                  .s:violet    .s:bg_none   .s:fmt_none
 
 "}}}
+" python highlighting "{{{
+" ---------------------------------------------------------------------
+" Use with https://github.com/hdima/python-syntax
+exe "hi! pythonInclude"                  .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! pythonStatement"                .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! pythonConditional"              .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! pythonRepeat"                   .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! pythonException"                .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! pythonFunction"                 .s:blue      .s:bg_none   .s:fmt_none
+exe "hi! pythonPreCondit"                .s:violet    .s:bg_none   .s:fmt_none
+exe "hi! pythonRepeat"                   .s:cyan      .s:bg_none   .s:fmt_none
+exe "hi! pythonExClass"                  .s:orange    .s:bg_none   .s:fmt_none
+
+"}}}
 " javascript "{{{
 " ---------------------------------------------------------------------
 " Use with https://github.com/pangloss/vim-javascript
