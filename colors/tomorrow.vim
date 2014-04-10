@@ -488,6 +488,8 @@ exe "hi! PreProc"        .s:fmt_none   .s:fg_orange .s:bg_none
 "        Macro           same as Define
 "        PreCondit       preprocessor #if, #else, #endif, etc.
 
+exe "hi! UserType"            .s:fmt_none   .s:fg_violet .s:bg_none
+
 exe "hi! Type"           .s:fmt_none   .s:fg_yellow .s:bg_none
 "       *Type            int, long, char, etc.
 "        StorageClass    static, register, volatile, etc.
