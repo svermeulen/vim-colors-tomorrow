@@ -226,6 +226,7 @@ let colors_name = "tomorrow"
 " neutral gray monotone palette component)
 if (has("gui_running"))
     let s:vmode       = "gui"
+    let s:base4       = "#373b41"
     let s:base3       = "#1d1f21"
     let s:base2       = "#282a2e"
     let s:base1       = "#969896"
@@ -240,6 +241,7 @@ if (has("gui_running"))
     let s:green       = "#b5bd68"
 elseif g:tomorrow_termcolors != 256 && &t_Co >= 16
     let s:vmode       = "cterm"
+    let s:base4       = "0"
     let s:base3       = "0"
     let s:base2       = "8"
     let s:base1       = "11"
@@ -254,6 +256,7 @@ elseif g:tomorrow_termcolors != 256 && &t_Co >= 16
     let s:green       = "2"
 elseif g:tomorrow_termcolors == 256
     let s:vmode       = "cterm"
+    let s:base4       = "234"
     let s:base3       = "234"
     let s:base2       = "236"
     let s:base1       = "246"
@@ -269,6 +272,7 @@ elseif g:tomorrow_termcolors == 256
 else
     let s:vmode       = "cterm"
     let s:bright      = "* term=bold cterm=bold"
+    let s:base4       = "DarkGray"      " 0*
     let s:base3       = "DarkGray"      " 0*
     let s:base2       = "Black"         " 0
     let s:base1       = "LightYellow"   " 3*
@@ -286,6 +290,7 @@ endif
 if (&background == 'light')
   if (has("gui_running"))
       let s:vmode       = "gui"
+      let s:base4       = "#ffffff"
       let s:base3       = "#ffffff"
       let s:base2       = "#efefef"
       let s:base1       = "#8e908c"
@@ -300,6 +305,7 @@ if (&background == 'light')
       let s:green       = "#718c00"
   elseif g:tomorrow_termcolors == 256
       let s:vmode       = "cterm"
+      let s:base4       = "234"
       let s:base3       = "234"
       let s:base2       = "236"
       let s:base1       = "246"
@@ -362,6 +368,7 @@ endif
 
 exe "let s:bg_none      = ' ".s:vmode."bg=".s:none   ."'"
 exe "let s:bg_back      = ' ".s:vmode."bg=".s:back   ."'"
+exe "let s:bg_base4     = ' ".s:vmode."bg=".s:base4  ."'"
 exe "let s:bg_base3     = ' ".s:vmode."bg=".s:base3  ."'"
 exe "let s:bg_base2     = ' ".s:vmode."bg=".s:base2  ."'"
 exe "let s:bg_base1     = ' ".s:vmode."bg=".s:base1  ."'"
@@ -513,13 +520,17 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 " ---------------------------------------------------------------------
 exe "hi! SpecialKey" .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! NonText"    .s:fmt_bold   .s:fg_red    .s:bg_none
-exe "hi! StatusLine"     .s:fmt_none   .s:fg_base1   .s:bg_base2  .s:fmt_revbb
-exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base1  .s:bg_base2  .s:fmt_revbb
-exe "hi! Visual"         .s:fmt_none   .s:fg_base1  .s:bg_base3  .s:fmt_revbb
+"exe "hi! StatusLine"     .s:fmt_none   .s:fg_base1   .s:bg_base2  .s:fmt_revbb
+"exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base1  .s:bg_base2  .s:fmt_revbb
+
+"exe "hi! Visual"         .s:fmt_none   .s:fg_base1  .s:bg_base3  .s:fmt_revbb
+"exe "hi! Visual"        .s:fg_none        .s:bg_selection   .s:fmt_none
+exe "hi! Visual"         .s:fmt_none   .s:fg_none  .s:bg_base4
+
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ErrorMsg"       .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
-exe "hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none
+exe "hi! Search"         .s:fmt_undr   .s:fg_yellow .s:bg_base2
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base1  .s:bg_base2
@@ -574,7 +585,7 @@ exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base1  .s:bg_base1    .s:sp_base1  
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base2
 exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base2   .s:sp_base1
 exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base2
-exe "hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_base1
+exe "hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_base0
 hi! link lCursor Cursor
 exe "hi! MatchParen"     .s:fmt_bold   .s:fg_base0    .s:bg_red
 
