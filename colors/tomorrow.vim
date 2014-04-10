@@ -229,6 +229,7 @@ if (has("gui_running"))
     let s:base4       = "#373b41"
     let s:base3       = "#1d1f21"
     let s:base2       = "#282a2e"
+    let s:brightwhite       = "#cc6666"
     let s:base1       = "#969896"
     let s:base0       = "#c5c8c6"
     let s:yellow      = "#f0c674"
@@ -239,6 +240,8 @@ if (has("gui_running"))
     let s:blue        = "#81a2be"
     let s:cyan        = "#8abeb7"
     let s:green       = "#b5bd68"
+    let s:darkgreen       = "#898E4F"
+    let s:darkblue       = "#586F82"
 elseif g:tomorrow_termcolors != 256 && &t_Co >= 16
     let s:vmode       = "cterm"
     let s:base4       = "0"
@@ -371,9 +374,12 @@ exe "let s:bg_back      = ' ".s:vmode."bg=".s:back   ."'"
 exe "let s:bg_base4     = ' ".s:vmode."bg=".s:base4  ."'"
 exe "let s:bg_base3     = ' ".s:vmode."bg=".s:base3  ."'"
 exe "let s:bg_base2     = ' ".s:vmode."bg=".s:base2  ."'"
+exe "let s:bg_brightwhite     = ' ".s:vmode."bg=".s:brightwhite  ."'"
 exe "let s:bg_base1     = ' ".s:vmode."bg=".s:base1  ."'"
 exe "let s:bg_base0     = ' ".s:vmode."bg=".s:base0  ."'"
 exe "let s:bg_green     = ' ".s:vmode."bg=".s:green  ."'"
+exe "let s:bg_darkgreen     = ' ".s:vmode."bg=".s:darkgreen  ."'"
+exe "let s:bg_darkblue     = ' ".s:vmode."bg=".s:darkblue  ."'"
 exe "let s:bg_yellow    = ' ".s:vmode."bg=".s:yellow ."'"
 exe "let s:bg_orange    = ' ".s:vmode."bg=".s:orange ."'"
 exe "let s:bg_red       = ' ".s:vmode."bg=".s:red    ."'"
@@ -520,7 +526,7 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 "}}}
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! SpecialKey" .s:fmt_revr   .s:fg_red    .s:bg_none
+exe "hi! SpecialKey" .s:fmt_none   .s:fg_red    .s:bg_none
 exe "hi! NonText"    .s:fmt_bold   .s:fg_red    .s:bg_none
 "exe "hi! StatusLine"     .s:fmt_none   .s:fg_base1   .s:bg_base2  .s:fmt_revbb
 "exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base1  .s:bg_base2  .s:fmt_revbb
@@ -587,9 +593,9 @@ exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base1  .s:bg_base1    .s:sp_base1  
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base2
 exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base2   .s:sp_base1
 exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base2
-exe "hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_base0
+exe "hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_brightwhite
 hi! link lCursor Cursor
-exe "hi! MatchParen"     .s:fmt_bold   .s:fg_base0    .s:bg_red
+exe "hi! MatchParen"     .s:fmt_bold   .s:fg_base3    .s:bg_darkblue
 
 "}}}
 " vim syntax highlighting "{{{
