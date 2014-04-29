@@ -231,6 +231,8 @@ if (has("gui_running"))
     let s:base2       = "#282a2e"
     let s:brightwhite       = "#cc6666"
     let s:base1       = "#969896"
+    let s:base5       = "#111111"
+    let s:base6       = "#444444"
     let s:base0       = "#c5c8c6"
     let s:yellow      = "#f0c674"
     let s:orange      = "#de935f"
@@ -239,6 +241,7 @@ if (has("gui_running"))
     let s:violet      = "#b294bb"
     let s:blue        = "#81a2be"
     let s:cyan        = "#8abeb7"
+    let s:cyan2        = "#ffffff"
     let s:green       = "#b5bd68"
     let s:darkgreen       = "#898E4F"
     let s:darkblue       = "#586F82"
@@ -248,6 +251,7 @@ elseif g:tomorrow_termcolors != 256 && &t_Co >= 16
     let s:base3       = "0"
     let s:base2       = "8"
     let s:base1       = "11"
+    let s:base5       = "11"
     let s:base0       = "12"
     let s:yellow      = "3"
     let s:orange      = "9"
@@ -263,6 +267,7 @@ elseif g:tomorrow_termcolors == 256
     let s:base3       = "234"
     let s:base2       = "236"
     let s:base1       = "246"
+    let s:base5       = "246"
     let s:base0       = "251"
     let s:yellow      = "222"
     let s:orange      = "173"
@@ -279,6 +284,7 @@ else
     let s:base3       = "DarkGray"      " 0*
     let s:base2       = "Black"         " 0
     let s:base1       = "LightYellow"   " 3*
+    let s:base5       = "LightYellow"   " 3*
     let s:base0       = "LightBlue"     " 4*
     let s:yellow      = "DarkYellow"    " 3
     let s:orange      = "LightRed"      " 1*
@@ -387,12 +393,15 @@ exe "let s:bg_magenta   = ' ".s:vmode."bg=".s:magenta."'"
 exe "let s:bg_violet    = ' ".s:vmode."bg=".s:violet ."'"
 exe "let s:bg_blue      = ' ".s:vmode."bg=".s:blue   ."'"
 exe "let s:bg_cyan      = ' ".s:vmode."bg=".s:cyan   ."'"
+exe "let s:bg_cyan2      = ' ".s:vmode."bg=".s:cyan2   ."'"
 
 exe "let s:fg_none      = ' ".s:vmode."fg=".s:none   ."'"
 exe "let s:fg_back      = ' ".s:vmode."fg=".s:back   ."'"
 exe "let s:fg_base3     = ' ".s:vmode."fg=".s:base3  ."'"
 exe "let s:fg_base2     = ' ".s:vmode."fg=".s:base2  ."'"
 exe "let s:fg_base1     = ' ".s:vmode."fg=".s:base1  ."'"
+exe "let s:fg_base5     = ' ".s:vmode."fg=".s:base5  ."'"
+exe "let s:fg_base6     = ' ".s:vmode."fg=".s:base6  ."'"
 exe "let s:fg_base0     = ' ".s:vmode."fg=".s:base0  ."'"
 exe "let s:fg_green     = ' ".s:vmode."fg=".s:green  ."'"
 exe "let s:fg_yellow    = ' ".s:vmode."fg=".s:yellow ."'"
@@ -583,10 +592,17 @@ exe "hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red
 exe "hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet
 exe "hi! SpellRare"      .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_cyan
 exe "hi! SpellLocal"     .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_yellow
-exe "hi! Pmenu"          .s:fmt_none   .s:fg_base0  .s:bg_base2   .s:fmt_revbb
-exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base1  .s:bg_base2    .s:fmt_revbb
+
+"exe "hi! Pmenu"          .s:fmt_none   .s:fg_base0  .s:bg_base2   .s:fmt_revbb
+"exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base1  .s:bg_base2    .s:fmt_revbb
+"exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base1   .s:bg_base0   .s:fmt_revbb
+"exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base0  .s:bg_base3   .s:fmt_revbb
+
+exe "hi! Pmenu"          .s:fmt_none   .s:fg_base5  .s:bg_cyan   .s:fmt_revbb
+exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base6  .s:bg_cyan2    .s:fmt_revbb
 exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base1   .s:bg_base0   .s:fmt_revbb
 exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base0  .s:bg_base3   .s:fmt_revbb
+
 exe "hi! TabLine"        .s:fmt_undr   .s:fg_base0  .s:bg_base2   .s:sp_base0
 exe "hi! TabLineFill"    .s:fmt_undr   .s:fg_base0  .s:bg_base2   .s:sp_base0
 exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base1  .s:bg_base1    .s:sp_base1   .s:fmt_revbbu
