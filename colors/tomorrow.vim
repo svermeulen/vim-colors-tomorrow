@@ -563,6 +563,7 @@ exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! WildMenu"       .s:fmt_none   .s:fg_base1   .s:bg_base2  .s:fmt_revbb
 exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base2   .s:sp_base3
 exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base2
+
 if      (g:tomorrow_diffmode=="high")
 exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
 exe "hi! DiffChange"     .s:fmt_revr   .s:fg_yellow .s:bg_none
