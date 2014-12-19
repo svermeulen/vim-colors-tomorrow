@@ -241,6 +241,7 @@ if (has("gui_running"))
     let s:violet      = "#b294bb"
     let s:blue        = "#81a2be"
     let s:cyan        = "#8abeb7"
+    let s:brightgreen        = "#8ec83a"
     let s:cyan2        = "#ffffff"
     let s:green       = "#b5bd68"
     let s:darkgreen       = "#898E4F"
@@ -411,6 +412,7 @@ exe "let s:fg_magenta   = ' ".s:vmode."fg=".s:magenta."'"
 exe "let s:fg_violet    = ' ".s:vmode."fg=".s:violet ."'"
 exe "let s:fg_blue      = ' ".s:vmode."fg=".s:blue   ."'"
 exe "let s:fg_cyan      = ' ".s:vmode."fg=".s:cyan   ."'"
+exe "let s:fg_brightgreen      = ' ".s:vmode."fg=".s:brightgreen   ."'"
 
 exe "let s:fmt_none     = ' ".s:vmode."=NONE".          " term=NONE".    "'"
 exe "let s:fmt_bold     = ' ".s:vmode."=NONE".s:b.      " term=NONE".s:b."'"
@@ -523,6 +525,8 @@ exe "hi! Special"        .s:fmt_none   .s:fg_red    .s:bg_none
 "        Delimiter       character that needs attention
 "        SpecialComment  special things inside a comment
 "        Debug           debugging statements
+
+exe "hi! Delimiter"        .s:fmt_none   .s:fg_brightgreen    .s:bg_none
 
 exe "hi! Underlined"     .s:fmt_none   .s:fg_violet .s:bg_none
 "       *Underlined      text that stands out, HTML links
