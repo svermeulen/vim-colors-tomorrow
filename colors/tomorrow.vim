@@ -475,7 +475,7 @@ exe "hi! Comment"        .s:fmt_ital   .s:fg_base1  .s:bg_none
 "       *Comment         any comment
 
 exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
-exe "hi! Number"         .s:fmt_none   .s:fg_magenta.s:bg_none
+"exe "hi! Number"         .s:fmt_none   .s:fg_magenta.s:bg_none
 "       *Constant        any constant
 "        String          a string constant: "this is a string"
 "        Character       a character constant: 'c', '\n'
@@ -496,20 +496,25 @@ exe "hi! Statement"      .s:fmt_none   .s:fg_green  .s:bg_none
 "        Keyword         any other keyword
 "        Exception       try, catch, throw
 
-exe "hi! PreProc"        .s:fmt_none   .s:fg_orange .s:bg_none
+exe "hi! PreProc"        .s:fmt_none   .s:fg_violet .s:bg_none
 "       *PreProc         generic Preprocessor
 "        Include         preprocessor #include
 "        Define          preprocessor #define
 "        Macro           same as Define
 "        PreCondit       preprocessor #if, #else, #endif, etc.
 
-exe "hi! UserType"            .s:fmt_none   .s:fg_violet .s:bg_none
+exe "hi! UserType"           .s:fmt_none   .s:fg_yellow .s:bg_none
 
 exe "hi! Type"           .s:fmt_none   .s:fg_yellow .s:bg_none
 "       *Type            int, long, char, etc.
 "        StorageClass    static, register, volatile, etc.
 "        Structure       struct, union, enum, etc.
 "        Typedef         A typedef
+
+exe "hi! Typedef"           .s:fmt_none   .s:fg_orange .s:bg_none
+
+exe "hi! Number"        .s:fmt_none   .s:fg_red    .s:bg_none
+exe "hi! StorageClass"         .s:fmt_none   .s:fg_green.s:bg_none
 
 exe "hi! Special"        .s:fmt_none   .s:fg_red    .s:bg_none
 "       *Special         any special symbol
