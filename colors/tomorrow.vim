@@ -233,6 +233,7 @@ if (has("gui_running"))
     let s:base1       = "#969896"
     let s:base5       = "#111111"
     let s:base6       = "#444444"
+    let s:base7       = "#666666"
     let s:base0       = "#c5c8c6"
     let s:yellow      = "#f0c674"
     let s:orange      = "#de935f"
@@ -403,6 +404,7 @@ exe "let s:fg_base2     = ' ".s:vmode."fg=".s:base2  ."'"
 exe "let s:fg_base1     = ' ".s:vmode."fg=".s:base1  ."'"
 exe "let s:fg_base5     = ' ".s:vmode."fg=".s:base5  ."'"
 exe "let s:fg_base6     = ' ".s:vmode."fg=".s:base6  ."'"
+exe "let s:fg_base7     = ' ".s:vmode."fg=".s:base7  ."'"
 exe "let s:fg_base0     = ' ".s:vmode."fg=".s:base0  ."'"
 exe "let s:fg_green     = ' ".s:vmode."fg=".s:green  ."'"
 exe "let s:fg_yellow    = ' ".s:vmode."fg=".s:yellow ."'"
@@ -570,7 +572,7 @@ exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base2  .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! WildMenu"       .s:fmt_none   .s:fg_base1   .s:bg_base2  .s:fmt_revbb
-exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base2   .s:sp_base3
+exe "hi! Folded"         .s:fmt_undb   .s:fg_base6  .s:bg_none   .s:sp_base3
 exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base2
 
 if      (g:tomorrow_diffmode=="high")
