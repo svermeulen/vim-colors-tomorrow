@@ -562,6 +562,8 @@ exe "hi! Search"         .s:fmt_undr   .s:fg_yellow .s:bg_base2
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base1  .s:bg_base2
+"exe "hi! LineNr"         .s:fmt_none   .s:fg_base2  .s:bg_base2
+exe "hi! CursorLineNR"     .s:fmt_none   .s:fg_base0  .s:bg_base2
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 if ( has("gui_running") || &t_Co > 8 )
     exe "hi! VertSplit"  .s:fmt_none   .s:fg_base2  .s:bg_base2
