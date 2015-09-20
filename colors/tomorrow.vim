@@ -240,6 +240,7 @@ if (has("gui_running"))
     let s:red         = "#cc6666"
     let s:magenta     = "#b294bb"
     let s:violet      = "#b294bb"
+    let s:violet2      = "#5f8787"
     let s:blue        = "#81a2be"
     let s:cyan        = "#8abeb7"
     let s:brightgreen        = "#8ec83a"
@@ -311,6 +312,7 @@ if (&background == 'light')
       let s:red         = "#c82829"
       let s:magenta     = "#8959a8"
       let s:violet      = "#8959a8"
+      let s:violet2      = "#5f8787"
       let s:blue        = "#4271ae"
       let s:cyan        = "#3e999f"
       let s:green       = "#718c00"
@@ -412,6 +414,7 @@ exe "let s:fg_orange    = ' ".s:vmode."fg=".s:orange ."'"
 exe "let s:fg_red       = ' ".s:vmode."fg=".s:red    ."'"
 exe "let s:fg_magenta   = ' ".s:vmode."fg=".s:magenta."'"
 exe "let s:fg_violet    = ' ".s:vmode."fg=".s:violet ."'"
+exe "let s:fg_violet2    = ' ".s:vmode."fg=".s:violet2 ."'"
 exe "let s:fg_blue      = ' ".s:vmode."fg=".s:blue   ."'"
 exe "let s:fg_cyan      = ' ".s:vmode."fg=".s:cyan   ."'"
 exe "let s:fg_brightgreen      = ' ".s:vmode."fg=".s:brightgreen   ."'"
@@ -500,7 +503,9 @@ exe "hi! Statement"      .s:fmt_none   .s:fg_green  .s:bg_none
 "        Keyword         any other keyword
 "        Exception       try, catch, throw
 
-exe "hi! PreProc"        .s:fmt_none   .s:fg_violet .s:bg_none
+exe "hi! Function"        .s:fmt_none   .s:fg_violet .s:bg_none
+
+exe "hi! PreProc"        .s:fmt_none   .s:fg_violet2 .s:bg_none
 "       *PreProc         generic Preprocessor
 "        Include         preprocessor #include
 "        Define          preprocessor #define
