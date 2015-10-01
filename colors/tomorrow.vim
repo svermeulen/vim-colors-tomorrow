@@ -563,7 +563,10 @@ exe "hi! Visual"         .s:fmt_none   .s:fg_none  .s:bg_base4
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ErrorMsg"       .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
+
 exe "hi! Search"         .s:fmt_undr   .s:fg_yellow .s:bg_base2
+"hi! Search gui=bold term=NONE guifg=#000000 guibg=#C6A361
+
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base1  .s:bg_base2
